@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos | Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        /* Gradientes personalizados */
+        .gradient-bg {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+        }
+        
+        .gradient-bg-alt {
+            background: linear-gradient(135deg, #ffb347 0%, #ff8c00 100%);
+        }
+        
+        .gradient-bg-soft {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #ffd700 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gradient-text-alt {
+            background: linear-gradient(135deg, #ffb347 0%, #ff8c00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link:hover {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-effect {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            background: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+        }
+        
+        .btn-gradient {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            transition: all 0.3s ease;
+            border: none;
+        }
+        
+        .btn-gradient:hover {
+            background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+    </style>
+</head>
+<body class="gradient-bg-soft font-sans min-h-screen">
+    <!-- Navigation -->
+    <nav class="glass-effect shadow-lg fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="home.html" class="flex items-center space-x-2">
+                    <i data-feather="code" class="text-yellow-400"></i>
+                    <span class="font-bold gradient-text">Portfólio Digital</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="home.html" class="nav-link text-white hover:text-yellow-400">Home</a>
+                    <a href="about.html" class="nav-link text-white hover:text-yellow-400">Sobre Mim</a>
+                    <a href="projects.html" class="nav-link text-white hover:text-yellow-400">Projetos</a>
+                    <a href="academic.html" class="nav-link text-white hover:text-yellow-400">Formação</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden glass-effect border-t border-white/20">
+            <div class="px-4 py-2 space-y-2">
+                <a href="home.html" class="block py-2 text-white hover:text-yellow-400">Home</a>
+                <a href="about.html" class="block py-2 text-white hover:text-yellow-400">Sobre Mim</a>
+                <a href="projects.html" class="block py-2 text-white hover:text-yellow-400">Projetos</a>
+                <a href="academic.html" class="block py-2 text-white hover:text-yellow-400">Formação</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <main class="pt-24 pb-16 px-4 max-w-6xl mx-auto min-h-screen">
+        <section>
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">Meus Projetos</h1>
+                <p class="text-xl text-white max-w-3xl mx-auto">
+                    Aqui estão alguns dos projetos que desenvolvi ao longo da minha jornada.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <img src="/public/img/Screenshot from 2025-09-21 18-35-01.png" alt="Smart Farming" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-yellow-400 mb-2">Estufa Automatizada</h3>
+                        <p class="text-white mb-4">
+                            Sistema completo de exibição de dados para estufas, com controle de temperatura e umidade.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">HTML</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">CSS</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">MySql</span>
+                        </div>
+                        <a href="https://github.com/jofran2001/Projeto-Smart-Farming" class="text-blue-500 font-medium flex items-center">
+                            Ver mais
+                            <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <img src="/public/img/prostock.png" alt="ProStock Initial Screen" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-yellow-400 mb-2">Gerenciador de Estoque</h3>
+                        <p class="text-white mb-4">
+                            Sistema de Controle de Estoque focado em fornecer uma gestão integrada e eficiente para organizações. A solução permite o registro e controle automatizado de produtos, acompanhamento de movimentações de estoque e cadastro de fornecedores
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Node.js</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">TypeScript</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">MySql</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">tailwindcss</span>
+                        </div>
+                        <a href="https://github.com/jofran2001/API_2Semestre" class="text-blue-500 font-medium flex items-center">
+                            Ver mais
+                            <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <img src="/public/img/nectopoint.png" alt="Necto Point Initial Screen" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-yellow-400 mb-2">Sistema de Controle de Ponto</h3>
+                        <p class="text-white mb-4">
+                            Sistema de Gestão e Controle de Ponto Eletrônico focado em fornecer uma gestão integrada e eficiente para organizações. A solução permite o registro e controle automatizado de marcações de ponto, acompanhamento de horas extras, gestão de férias e folgas, e geração de relatórios detalhados
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">React</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">TypeScript</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Java</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">MongoDB</span>
+                        </div>
+                        <a href="https://github.com/jofran2001/nectopoint" class="text-blue-500 font-medium flex items-center">
+                            Ver mais
+                            <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <img src="/public/img/200w.gif" alt="Loading" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-yellow-400 mb-2">Sistema de Coleta de Dados Meteorológicos</h3>
+                        <p class="text-white mb-4">
+                            Sistema de Coleta de Dados Meteorológico em Tempo Real, com foco na prevenção de riscos e desastres naturais. A plataforma visa centralizar e analisar informações, como índices de chuva, captadas por uma rede de sensores de baixo custo.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">React</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">TypeScript</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Esp32</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">MongoDB</span>
+                        </div>
+                        <a href="https://github.com/Equipe-Skyfall/skytrack" class="text-blue-500 font-medium flex items-center">
+                            Ver mais
+                            <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <img src="/public/img/ollama.jpg" alt="Ollama Icon" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-yellow-400 mb-2">Agente IA para Regras de Negócios</h3>
+                        <p class="text-white mb-4">
+                            Agente inteligente capaz de interpretar regras de negócio em linguagem natural e convertê-las automaticamente em código Python funcional.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Ollama</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Python</span>
+                        </div>
+                        <a href="https://github.com/IA-Negocios-para-Python/negocios-python" class="text-blue-500 font-medium flex items-center">
+                            Ver mais
+                            <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <img src="/public/img/taskmanager.jpeg" alt="Portfolio" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-yellow-400 mb-2">Gerenciador de Tarefas Mobile</h3>
+                        <p class="text-white mb-4">
+                            App desenvolvido para facilitar a organização e produtividade pessoal, permitindo aos usuários criar, editar e acompanhar suas tarefas diárias de forma intuitiva e eficiente.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">React Native</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">CSS</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">MongoDB</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Android Studio</span>
+                        </div>
+                        <!-- <a href="#" class="text-blue-500 font-medium flex items-center">
+                            Ver mais
+                            <i data-feather="arrow-right" class="ml-1 w-4 h-4"></i>
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        AOS.init();
+        feather.replace();
+    </script>
+</body>
+</html>

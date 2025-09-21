@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formação | Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        /* Gradientes personalizados */
+        .gradient-bg {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+        }
+        
+        .gradient-bg-alt {
+            background: linear-gradient(135deg, #ffb347 0%, #ff8c00 100%);
+        }
+        
+        .gradient-bg-soft {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #ffd700 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gradient-text-alt {
+            background: linear-gradient(135deg, #ffb347 0%, #ff8c00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link:hover {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-effect {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 24px;
+            height: calc(100% - 24px);
+            width: 2px;
+            background: linear-gradient(180deg, #ffd700, #ff8c00);
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffb347 0%, #ff8c00 100%);
+            z-index: 1;
+            box-shadow: 0 0 10px rgba(240, 147, 251, 0.5);
+        }
+    </style>
+</head>
+<body class="gradient-bg-soft font-sans min-h-screen">
+    <!-- Navigation -->
+    <nav class="glass-effect shadow-lg fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="home.html" class="flex items-center space-x-2">
+                    <i data-feather="code" class="text-yellow-400"></i>
+                    <span class="font-bold text-yellow-400">Portfólio Digital</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="home.html" class="nav-link text-white hover:text-yellow-400">Home</a>
+                    <a href="about.html" class="nav-link text-white hover:text-yellow-400">Sobre Mim</a>
+                    <a href="projects.html" class="nav-link text-white hover:text-yellow-400">Projetos</a>
+                    <a href="academic.html" class="nav-link text-white hover:text-yellow-400">Formação</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-4 py-2 space-y-2">
+                <a href="home.html" class="block py-2 text-gray-700 hover:text-yellow-400">Home</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-yellow-400">Sobre Mim</a>
+                <a href="projects.html" class="block py-2 text-gray-700 hover:text-yellow-400">Projetos</a>
+                <a href="academic.html" class="block py-2 text-gray-700 hover:text-yellow-400">Formação</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Education Section -->
+    <main class="pt-24 pb-16 px-4 max-w-6xl mx-auto min-h-screen">
+        <section>
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-bold text-yellow-400 mb-4">Minha Formação</h1>
+                <p class="text-xl text-white max-w-3xl mx-auto">
+                    Minha jornada acadêmica e cursos que realizei ao longo dos anos.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Academic Education -->
+                <div data-aos="fade-right">
+                    <h2 class="text-2xl font-bold text-yellow-400 mb-8 flex items-center">
+                        <i data-feather="book-open" class="mr-2 text-yellow-400"></i>
+                        Formação Acadêmica
+                    </h2>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3 class="font-bold text-lg">Técnico em Administração</h3>
+                                <p class="text-gray-700 mb-1">ETEC-SJC</p>
+                                <p class="text-gray-500 text-sm">2017 - 2019</p>
+                                <p class="text-gray-700 mt-2">
+                                    Curso técnico com foco em gestão de negócios e administração.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3 class="font-bold text-lg">Ensino Médio</h3>
+                                <p class="text-gray-700 mb-1">ETEC-SJC</p>
+                                <p class="text-gray-500 text-sm">2017 - 2019</p>
+                                <p class="text-gray-700 mt-2">
+                                    Formação integrada ao ensino técnico.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3 class="font-bold text-lg">Tecnólogo em Desenvolvimento de Software Multiplataforma</h3>
+                                <p class="text-gray-700 mb-1">FATEC-SJC</p>
+                                <p class="text-gray-500 text-sm">2024 - 2026</p>
+                                <p class="text-gray-700 mt-2">
+                                    Formação completa  com ênfase em desenvolvimento de software.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Courses -->
+                <div data-aos="fade-left">
+                    <h2 class="text-2xl font-bold text-yellow-400 mb-8 flex items-center">
+                        <i data-feather="award" class="mr-2 text-yellow-400"></i>
+                        Cursos Complementares
+                    </h2>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3 class="font-bold text-lg">Desenvolvimento Front-end</h3>
+                                <p class="text-gray-700 mb-1">FATEC-SJC</p>
+                                <p class="text-gray-500 text-sm">2025</p>
+                                <p class="text-gray-700 mt-2">
+                                    Curso cobrindo React, Node.js, TypeScript e arquitetura de software.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3 class="font-bold text-lg">Cybersecurity</h3>
+                                <p class="text-gray-700 mb-1">Coursera/Google</p>
+                                <p class="text-gray-500 text-sm">2025 - 2026</p>
+                                <p class="text-gray-700 mt-2">
+                                    Fundamentos de cibersegurança, proteção de dados e práticas recomendadas.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3 class="font-bold text-lg">Análise de dados</h3>
+                                <p class="text-gray-700 mb-1">Coursera/Google</p>
+                                <p class="text-gray-500 text-sm">2025 - 2026</p>
+                                <p class="text-gray-700 mt-2">
+                                    Fundamentos de análise de dados, visualização e interpretação de resultados.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h3 class="font-bold text-lg">UX/UI Design</h3>
+                                <p class="text-gray-700 mb-1">Udemy</p>
+                                <p class="text-gray-500 text-sm">2020</p>
+                                <p class="text-gray-700 mt-2">
+                                    Princípios de design de interface e experiência do usuário.
+                                </p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        AOS.init();
+        feather.replace();
+    </script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim | Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        /* Gradientes personalizados - Paleta Amarelo/Preto */
+        .gradient-bg {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+        }
+        
+        .gradient-bg-alt {
+            background: linear-gradient(135deg, #ffb347 0%, #ff8c00 100%);
+        }
+        
+        .gradient-bg-soft {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #ffd700 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gradient-text-alt {
+            background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, #ffd700, #ff8c00);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link:hover {
+            background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-effect {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        
+        .hobby-card {
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        
+        .hobby-card:hover {
+            transform: translateY(-5px);
+            background: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+        }
+    </style>
+</head>
+<body class="gradient-bg-soft font-sans min-h-screen">
+    <!-- Navigation -->
+    <nav class="glass-effect shadow-lg fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="home.html" class="flex items-center space-x-2">
+                    <i data-feather="code" class="text-yellow-400"></i>
+                    <span class="font-bold gradient-text">Portfólio Digital</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="home.html" class="nav-link text-white hover:text-yellow-400">Home</a>
+                    <a href="about.html" class="nav-link text-white hover:text-yellow-400">Sobre Mim</a>
+                    <a href="projects.html" class="nav-link text-white hover:text-yellow-400">Projetos</a>
+                    <a href="academic.html" class="nav-link text-white hover:text-yellow-400">Formação</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden glass-effect border-t border-yellow-400/20">
+            <div class="px-4 py-2 space-y-2">
+                <a href="home.html" class="block py-2 text-white hover:text-yellow-400">Home</a>
+                <a href="about.html" class="block py-2 text-white hover:text-yellow-400">Sobre Mim</a>
+                <a href="projects.html" class="block py-2 text-white hover:text-yellow-400">Projetos</a>
+                <a href="academic.html" class="block py-2 text-white hover:text-yellow-400">Formação</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <main class="pt-24 pb-16 px-4 max-w-6xl mx-auto min-h-screen">
+        <section>
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-bold gradient-text mb-4">Sobre Mim</h1>
+                <p class="text-xl text-white max-w-3xl mx-auto">
+                    Conheça um pouco mais sobre quem eu sou, meus hobbies e aspirações.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                <div data-aos="fade-right">
+                    <img src="/public/img/jpf.jpeg   " alt="Profile" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div data-aos="fade-left">
+                    <h2 class="text-2xl font-bold gradient-text-alt mb-4">Minha Jornada</h2>
+                    <p class="text-white mb-6">
+                        Me chamo João Pedro França, natural de Belo Horizonte.
+                        Sou um entusiasta da tecnologia com paixão por resolver problemas complexos através da programação. 
+                        Minha jornada começou em 2024, quando decidi mudar de área e me aprofundar no mundo da tecnologia.
+                    </p>
+                    <p class="text-white mb-6">
+                        Acredito que a tecnologia tem o poder de transformar vidas e estou comprometido em criar soluções 
+                        que tornem o mundo um lugar melhor.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">JavaScript</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">React</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Node.js</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-20" data-aos="fade-up">
+                <h2 class="text-2xl font-bold text-yellow-400 mb-8 text-center">Meus Hobbies</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="hobby-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+                        <div class="text-blue-500 mb-4">
+                            <i data-feather="headphones" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Games</h3>
+                        <p class="text-gray-600">
+                            Adoro jogar jogos cooperativos com meus amigos nas horas disponíveis.
+                        </p>
+                    </div>
+                    <div class="hobby-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+                        <div class="text-blue-500 mb-4">
+                            <i data-feather="music" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Música</h3>
+                        <p class="text-gray-600">
+                            Toco violão nas horas vagas e sou um grande fã de rock e MPB.
+                        </p>
+                    </div>
+                    <div class="hobby-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+                        <div class="text-blue-500 mb-4">
+                            <i data-feather="map" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Viagens</h3>
+                        <p class="text-gray-600">
+                            Explorar novos lugares e culturas é uma das minhas maiores paixões.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div data-aos="fade-up">
+                <h2 class="text-2xl font-bold text-yellow-400 mb-8 text-center">Minhas Aspirações</h2>
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <p class="text-gray-600 mb-6">
+                        Meu objetivo é me tornar um desenvolvedor full-stack de excelência, capaz de criar soluções completas 
+                        e escaláveis que resolvam problemas reais.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Nos próximos anos, pretendo me especializar em arquitetura de software e UX/UI, 
+                        áreas que acredito serem de grande impacto no futuro da tecnologia.
+                    </p>
+                    <p class="text-gray-600">
+                        Além disso, desejo contribuir para a comunidade tech compartilhando conhecimento e ajudando 
+                        outras pessoas a ingressarem nesse mundo fascinante.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        AOS.init();
+        feather.replace();
+    </script>
+</body>
+</html>
